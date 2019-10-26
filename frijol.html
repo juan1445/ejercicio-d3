@@ -31,14 +31,14 @@
                 <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
                   <ul class="navbar-nav">
                     <li class="nav-item active">
-                      <h4><a class="nav-link menu spacing" href="frijol.html">Plantación Frijol<span class="sr-only">(current)</span></a></h4>
+                      <h5><a class="nav-link menu spacing" href="frijol.html">Plantación Frijol<span class="sr-only">(current)</span></a></h5>
                     </li>
                     <li class="nav-item">
-                        <h4><a class="nav-link menu spacing" href="zanahoria.html">Plantación Zanahoria</a></h4>
+                        <h5><a class="nav-link menu spacing" href="zanahoria.html">Plantación Zanahoria</a></h5>
                       
                     </li>
                     <li class="nav-item">
-                        <h4><a class="nav-link menu spacing" href="papa.html">Plantación Papa</a></h4>
+                        <h5><a class="nav-link menu spacing" href="papa.html">Plantación Papa</a></h5>
                       
                     </li>
                   </ul>
@@ -115,20 +115,14 @@
     <script>
 
 var data = [{
-  "name": "Temperatura",
-  "actor": "Will Smith",
-  "rank": 100,
-  "description": "An expert marksman and assassin."
+  "title": "Temperatura",
+  "value": 100,
 }, {
-  "name": "Luz",
-  "actor": "Margot Robbie",
-  "rank": 50,
-  "description": "The Joker's main squeeze, the former psychiatrist is an insane sociopath with tremendous sex appeal."
+  "title": "Luz",
+  "value": 50,
 }, {
-  "name": "Humedad",
-  "actor": "Joel Kinnaman",
-  "rank": 20,
-  "description": "The defacto leader of the group, he takes his orders directly from Amanda Waller."
+  "title": "Humedad",
+  "value": 20,
 }];
 
 var margin = {
@@ -155,11 +149,11 @@ var svg = d3.select("#barGraph")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 x.domain(data.map(function(d) {
-  return d.name;
+  return d.title;
 }));
 
 y.domain([0, d3.max(data, function(d) {
-  return d.rank;
+  return d.value;
 })]);
 
 svg.append("g")
@@ -170,7 +164,7 @@ svg.append("g")
   .style("text-anchor", "end")
   .attr("dx", "-0.5em")
   .attr("dy", "-.55em")
-  .attr("y", 30)
+  .attr("y", 25)
   .attr("transform", "rotate(-45)");
 
 svg.append("g")
@@ -180,7 +174,7 @@ svg.append("g")
 svg.append("text")
   .attr("transform", "rotate(-90)")
   .attr("y", 5)
-  .attr("dy", "0.8em")
+  .attr("dy", "0.5em")
   .attr("text-anchor", "end")
   .text("Consumo");
 
@@ -190,14 +184,14 @@ svg.selectAll("bar")
   .append("rect")
   .style("fill", "green")
   .attr("x", function(d) {
-    return x(d.name);
+    return x(d.title);
   })
   .attr("width", x.bandwidth())
   .attr("y", function(d) {
-    return y(d.rank);
+    return y(d.value);
   })
   .attr("height", function(d) {
-    return height - y(d.rank);
+    return height - y(d.value);
   })
   .on("mouseover", function() {
     tooltip.style("display", null);
@@ -210,7 +204,7 @@ svg.selectAll("bar")
 
   tooltip.transition().duration(200)
     .style("opacity", 0.9);
-  tooltip.select("div").html("Name: <strong>" + d.name + "</strong><br/>Rank: <strong>" + d.rank + "</strong>")
+  tooltip.select("div").html("Name: <strong>" + d.title + "</strong><br/>Rank: <strong>" + d.value + "</strong>")
     .style("position", "fixed")
     .style("left", (d3.event.pageX) + "px")
     .style("top", (d3.event.pageY - 28) + "px");
