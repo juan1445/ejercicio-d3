@@ -2,232 +2,308 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Plantación Frijol</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-        <script src="https://d3js.org/d3.v5.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.min.js"></script>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="BarChart.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Plantación Frijol</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="BarChart.css">
+  <link rel="stylesheet" href="styleProgressCircle.css">
 </head>
 
 <body>
-        <nav class="navbar navbar-expand-lg navbar-dark rounded border-bottom mb-5">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
-                  <ul class="navbar-nav">
-                    <li class="nav-item active">
-                      <h5><a class="nav-link menu spacing" href="frijol.html">Plantación Frijol<span class="sr-only">(current)</span></a></h5>
-                    </li>
-                    <li class="nav-item">
-                        <h5><a class="nav-link menu spacing" href="zanahoria.html">Plantación Zanahoria</a></h5>
-                      
-                    </li>
-                    <li class="nav-item">
-                        <h5><a class="nav-link menu spacing" href="papa.html">Plantación Papa</a></h5>
-                      
-                    </li>
-                  </ul>
-                </div>
-              </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark rounded border-bottom mb-5">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10"
+      aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <h5><a class="nav-link menu spacing" href="frijol.html">Plantación Frijol<span
+                class="sr-only">(current)</span></a></h5>
+        </li>
+        <li class="nav-item">
+          <h5><a class="nav-link menu spacing" href="zanahoria.html">Plantación Zanahoria</a></h5>
 
+        </li>
+        <li class="nav-item">
+          <h5><a class="nav-link menu spacing" href="papa.html">Plantación Papa</a></h5>
 
-
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-5 col-md-5 mx-auto mt-4">
-                <div class="card">
-                    <div class="card-header bg-success text-white">
-                        <h6>INFORMACIÓN GENERAL</h6>
-                    </div>
-                    <div class="row card-body mx-auto">
-                        <div class="col-md-6">
-                            <p>Cantidad de Plantas</p>
-                        </div>
-                        <div class="col-md-6"><p>60</p></div>
-                        <div class="col-md-6"><p>Fecha de Siembra</p></div>
-                        <div class="col-md-6"><p>24/07/2019</p></div>
-                        <div class="col-md-6"><p>Fecha estimada</p></div>
-                        <div class="col-md-6"><p>30/07/2019</p></div>
-                        <div class="col-md-6"><p>Fecha Real</p></div>
-                        <div class="col-md-6"><p>12/07/2019</p></div>
-                        <div class="col-md-6"><p>Solución Nutricional</p></div>
-                        <div class="col-md-6"><p>N/A</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-5 col-md-5 mx-auto mt-4">
-                    <div class="card">
-                            <div class="card-header bg-success text-white">
-                                    <h6>VARIABLES DE AMBIENTE</h6>
-                            </div>
-                            <div class="row card-body mx-auto">
-                                <div class="col-md-6">
-                                    <p>Temperatura</p>
-                                </div>
-                                <div class="col-md-6"><p>30°C</p></div>
-                                <div class="col-md-6"><p>Humedad</p></div>
-                                <div class="col-md-6"><p>40%</p></div>
-                                <div class="col-md-6"><p>Luz</p></div>
-                                <div class="col-md-6"><p>30kw</p></div>
-                            </div>
-                        </div>
-            </div>
-            <div class="col-12 col-sm-5 col-md-5 mx-auto mt-4">
-                    <div class="card">
-                            <div class="card-header bg-success text-white">
-                                <h6>VARIABLES DE AMBIENTE</h6>
-                            </div>
-                            <div class="row card-body mx-auto">
-                                <div class="col-md-6">
-                                    <p>Temperatura</p>
-                                </div>
-                                <div class="col-md-6"><p>30°C</p></div>
-                                <div class="col-md-6"><p>Humedad</p></div>
-                                <div class="col-md-6"><p>40%</p></div>
-                                <div class="col-md-6"><p>Luz</p></div>
-                                <div class="col-md-6"><p>30kw</p></div>
-                            </div>
-                        </div>
-            </div>
-            <div class="col-12 col-sm-5 col-md-5 mx-auto">
-                    <div class="graph" id="barGraph"></div>
-            </div>
-        </div>
+        </li>
+      </ul>
     </div>
+  </nav>
 
-    <script>
 
-var data = [{
-  "title": "Temperatura",
-  "value": 100,
-}, {
-  "title": "Luz",
-  "value": 50,
-}, {
-  "title": "Humedad",
-  "value": 20,
-}];
+  <div class="container">
+<div class="row text-center">
+  <div class="col-12 col-md-4 col-sm-6 mx-auto">
+    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+      <div class="card-header">Temperatura</div>
+      <div class="card-body">
+        <div class="progress-circle progress-75"><span>75</span></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-4 col-sm-6 mx-auto"><div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+    <div class="card-header">Luz</div>
+    <div class="card-body">
+      <div class="progress-circle progress-75"><span>75</span></div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+  </div></div>
+  <div class="col-12 col-md-4 col-sm-6 mx-auto">
+    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+      <div class="card-header">Humedad</div>
+      <div class="card-body">
+          <div class="progress-circle progress-75"><span>75</span></div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-secondary" role="progressbar" style="width: 75%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
-var margin = {
-    top: 20,
-    right: 20,
-    bottom: 100,
-    left: 30
-  },
-  width = 300 - margin.left - margin.right,
-  height = 300 - margin.top - margin.bottom,
-  x = d3.scaleBand().rangeRound([15, width]).paddingInner(0.5),
-  y = d3.scaleLinear().range([height, 0]);
 
-//draw axis
-var xAxis = d3.axisBottom().scale(x).ticks(6);
 
-var yAxis = d3.axisLeft().scale(y).ticks(5).tickSizeInner(-width).tickSizeOuter(0).tickPadding(10);
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-5 col-md-5 mx-auto mt-4">
+        <div class="card">
+          <div class="card-header bg-success text-white">
+            <h6>INFORMACIÓN GENERAL</h6>
+          </div>
+          <div class="row card-body mx-auto">
+            <div class="col-md-6">
+              <p>Cantidad de Plantas</p>
+            </div>
+            <div class="col-md-6">
+              <p>60</p>
+            </div>
+            <div class="col-md-6">
+              <p>Fecha de Siembra</p>
+            </div>
+            <div class="col-md-6">
+              <p>24/07/2019</p>
+            </div>
+            <div class="col-md-6">
+              <p>Fecha estimada</p>
+            </div>
+            <div class="col-md-6">
+              <p>30/07/2019</p>
+            </div>
+            <div class="col-md-6">
+              <p>Fecha Real</p>
+            </div>
+            <div class="col-md-6">
+              <p>12/07/2019</p>
+            </div>
+            <div class="col-md-6">
+              <p>Solución Nutricional</p>
+            </div>
+            <div class="col-md-6">
+              <p>N/A</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-5 col-md-5 mx-auto mt-4">
+        <div class="card">
+          <div class="card-header bg-success text-white">
+            <h6>VARIABLES DE AMBIENTE</h6>
+          </div>
+          <div class="row card-body mx-auto">
+            <div class="col-md-6">
+              <p>Temperatura</p>
+            </div>
+            <div class="col-md-6">
+              <p>30°C</p>
+            </div>
+            <div class="col-md-6">
+              <p>Humedad</p>
+            </div>
+            <div class="col-md-6">
+              <p>40%</p>
+            </div>
+            <div class="col-md-6">
+              <p>Luz</p>
+            </div>
+            <div class="col-md-6">
+              <p>30kw</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-5 col-md-5 mx-auto mt-4">
+        <div class="card">
+          <div class="card-header bg-success text-white">
+            <h6>VARIABLES DE AMBIENTE</h6>
+          </div>
+          <div class="row card-body mx-auto">
+            <div class="col-md-6">
+              <p>Temperatura</p>
+            </div>
+            <div class="col-md-6">
+              <p>30°C</p>
+            </div>
+            <div class="col-md-6">
+              <p>Humedad</p>
+            </div>
+            <div class="col-md-6">
+              <p>40%</p>
+            </div>
+            <div class="col-md-6">
+              <p>Luz</p>
+            </div>
+            <div class="col-md-6">
+              <p>30kw</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-5 col-md-5 mx-auto">
+        <div class="graph" id="barGraph"></div>
+      </div>
+    </div>
+  </div>
 
-var svg = d3.select("#barGraph")
-  .append("svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  <script>
 
-x.domain(data.map(function(d) {
-  return d.title;
-}));
+    var data = [{
+      "title": "Temperatura",
+      "value": 100,
+    }, {
+      "title": "Luz",
+      "value": 50,
+    }, {
+      "title": "Humedad",
+      "value": 20,
+    }];
 
-y.domain([0, d3.max(data, function(d) {
-  return d.value;
-})]);
+    var margin = {
+      top: 20,
+      right: 20,
+      bottom: 100,
+      left: 30
+    },
+      width = 300 - margin.left - margin.right,
+      height = 300 - margin.top - margin.bottom,
+      x = d3.scaleBand().rangeRound([15, width]).paddingInner(0.5),
+      y = d3.scaleLinear().range([height, 0]);
 
-svg.append("g")
-  .attr("class", "x axis")
-  .attr("transform", "translate(0, " + height + ")")
-  .call(xAxis)
-  .selectAll("text")
-  .style("text-anchor", "end")
-  .attr("dx", "-0.5em")
-  .attr("dy", "-.55em")
-  .attr("y", 25)
-  .attr("transform", "rotate(-45)");
+    //draw axis
+    var xAxis = d3.axisBottom().scale(x).ticks(6);
 
-svg.append("g")
-  .attr("class", "y axis")
-  .call(yAxis);
+    var yAxis = d3.axisLeft().scale(y).ticks(5).tickSizeInner(-width).tickSizeOuter(0).tickPadding(10);
 
-svg.append("text")
-  .attr("transform", "rotate(-90)")
-  .attr("y", 5)
-  .attr("dy", "0.5em")
-  .attr("text-anchor", "end")
-  .text("Consumo");
+    var svg = d3.select("#barGraph")
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-svg.selectAll("bar")
-  .data(data)
-  .enter()
-  .append("rect")
-  .style("fill", "green")
-  .attr("x", function(d) {
-    return x(d.title);
-  })
-  .attr("width", x.bandwidth())
-  .attr("y", function(d) {
-    return y(d.value);
-  })
-  .attr("height", function(d) {
-    return height - y(d.value);
-  })
-  .on("mouseover", function() {
-    tooltip.style("display", null);
-  })
-  .on("mouseout", function() {
-    tooltip.style("display", "none");
-  })
+    x.domain(data.map(function (d) {
+      return d.title;
+    }));
 
-.on("mousemove", function(d) {
+    y.domain([0, d3.max(data, function (d) {
+      return d.value;
+    })]);
 
-  tooltip.transition().duration(200)
-    .style("opacity", 0.9);
-  tooltip.select("div").html("Name: <strong>" + d.title + "</strong><br/>Rank: <strong>" + d.value + "</strong>")
-    .style("position", "fixed")
-    .style("left", (d3.event.pageX) + "px")
-    .style("top", (d3.event.pageY - 28) + "px");
+    svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0, " + height + ")")
+      .call(xAxis)
+      .selectAll("text")
+      .style("text-anchor", "end")
+      .attr("dx", "-0.5em")
+      .attr("dy", "-.55em")
+      .attr("y", 25)
+      .attr("transform", "rotate(-45)");
 
-});
+    svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis);
 
-var tooltip = d3.select("body").append("div")
-  .attr("class", "tooltip")
-  .style("opacity", 0.5);
+    svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 5)
+      .attr("dy", "0.5em")
+      .attr("text-anchor", "end")
+      .text("Consumo");
 
-tooltip.append("rect")
-  .attr("width", 30)
-  .attr("height", 20)
-  .attr("fill", "#ffffff")
-  .style("opacity", 0.5);
+    svg.selectAll("bar")
+      .data(data)
+      .enter()
+      .append("rect")
+      .style("fill", "green")
+      .attr("x", function (d) {
+        return x(d.title);
+      })
+      .attr("width", x.bandwidth())
+      .attr("y", function (d) {
+        return y(d.value);
+      })
+      .attr("height", function (d) {
+        return height - y(d.value);
+      })
+      .on("mouseover", function () {
+        tooltip.style("display", null);
+      })
+      .on("mouseout", function () {
+        tooltip.style("display", "none");
+      })
 
-tooltip.append("div")
-  .attr("x", 15)
-  .attr("dy", "1.2em")
-  .style("text-anchor", "middle")
-  .attr("font-size", "1.5em")
-  .attr("font-weight", "bold");
-    </script>
+      .on("mousemove", function (d) {
+
+        tooltip.transition().duration(200)
+          .style("opacity", 0.9);
+        tooltip.select("div").html("Name: <strong>" + d.title + "</strong><br/>Rank: <strong>" + d.value + "</strong>")
+          .style("position", "fixed")
+          .style("left", (d3.event.pageX) + "px")
+          .style("top", (d3.event.pageY - 28) + "px");
+
+      });
+
+    var tooltip = d3.select("body").append("div")
+      .attr("class", "tooltip")
+      .style("opacity", 0.5);
+
+    tooltip.append("rect")
+      .attr("width", 30)
+      .attr("height", 20)
+      .attr("fill", "#ffffff")
+      .style("opacity", 0.5);
+
+    tooltip.append("div")
+      .attr("x", 15)
+      .attr("dy", "1.2em")
+      .style("text-anchor", "middle")
+      .attr("font-size", "1.5em")
+      .attr("font-weight", "bold");
+  </script>
 </body>
 
 </html>
