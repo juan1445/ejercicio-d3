@@ -11,3 +11,8 @@
     background-color: green;
     color: white!important;
 }
+
+.module_title{
+    display: flex;
+    justify-content: center;
+}

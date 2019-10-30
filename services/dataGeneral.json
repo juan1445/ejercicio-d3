@@ -1,0 +1,200 @@
+{
+    "modulos": [
+        {
+            "id": 1,
+            "info_general": {
+                "Nombre": "Frijol",
+                "Cantidad de Plantas": "12",
+                "Fecha de Siembra": "10/10/2019",
+                "Fecha estimada": "15/10/2019",
+                "Fecha Real": "30/10/2019",
+                "Solución Nutricional": "Lo nutricional del Frijol"
+            },
+            "variables_control": {
+                "Luz": 18,
+                "Temperatura": 25,
+                "Humedad": 39
+            },
+            "variables_cuidado": {
+                "Pesticidas": "Una vez por semana",
+                "Riego": "Día por medio",
+                "Fertilizantes": "Dos veces por semana"
+            }
+        },
+        {
+            "id": 2,
+            "info_general": {
+                "Nombre": "Zanahoria",
+                "Cantidad de Plantas": "60",
+                "Fecha de Siembra": "10/11/2019",
+                "Fecha estimada": "15/11/2019",
+                "Fecha Real": "30/11/2019",
+                "Solución Nutricional": "Lo nutricional de la Zanahoria"
+            },
+            "variables_control": {
+                "Luz": 11,
+                "Temperatura": 67
+            },
+            "variables_cuidado": {
+                "Pesticidas": "Dos veces por semana",
+                "Riego": "Dos veces a la semana",
+                "Fertilizantes": "Cada día de la semana"
+            }
+        },
+        {
+            "id": 3,
+            "info_general": {
+                "Nombre": "Papa",
+                "Cantidad de Plantas": "12",
+                "Fecha de Siembra": "10/12/2019",
+                "Fecha estimada": "15/12/2019",
+                "Fecha Real": "30/12/2019",
+                "Solución Nutricional": "Lo nutricional de la Papa"
+            },
+            "variables_control": {
+                "Luz": 12
+            },
+            "variables_cuidado": {
+                "Pesticidas": "Tres veces por semana",
+                "Riego": "Cuatro veces a la semana",
+                "Fertilizantes": "Una vez cada mes"
+            }
+        }
+    ],
+    "simulador": [
+        {
+            "id": 1,
+            "variables_ambiente": {
+                "Luz": 10,
+                "Temperatura": 15,
+                "Humedad": 45
+            }
+        },
+        {
+            "id": 2,
+            "variables_ambiente": {
+                "Luz": 44,
+                "Temperatura": 23,
+                "Humedad": 12
+            }
+        },
+        {
+            "id": 3,
+            "variables_ambiente": {
+                "Luz": 17,
+                "Temperatura": 34,
+                "Humedad": 78
+            }
+        },
+        {
+            "id": 4,
+            "variables_ambiente": {
+                "Luz": 90,
+                "Temperatura": 12,
+                "Humedad": 56
+            }
+        }
+    ],
+    "Luz": [
+        {
+            "captura": "1",
+            "valor": 100
+        },
+        {
+            "captura": "2",
+            "valor": 90
+        },
+        {
+            "captura": "3",
+            "valor": 80
+        },
+        {
+            "captura": "4",
+            "valor": 70
+        },
+        {
+            "captura": "5",
+            "valor": 60
+        }
+    ],
+    "Temperatura": [
+        {
+            "captura": "1",
+            "valor": 10
+        },
+        {
+            "captura": "2",
+            "valor": 20
+        },
+        {
+            "captura": "3",
+            "valor": 30
+        },
+        {
+            "captura": "4",
+            "valor": 40
+        },
+        {
+            "captura": "5",
+            "valor": 50
+        },
+        {
+            "captura": "6",
+            "valor": 60
+        },
+        {
+            "captura": "7",
+            "valor": 70
+        }
+    ],
+    "Humedad": [
+        {
+            "captura": "1",
+            "valor": 90
+        },
+        {
+            "captura": "2",
+            "valor": 10
+        },
+        {
+            "captura": "3",
+            "valor": 78
+        },
+        {
+            "captura": "4",
+            "valor": 20
+        },
+        {
+            "captura": "5",
+            "valor": 37
+        },
+        {
+            "captura": "6",
+            "valor": 18
+        },
+        {
+            "captura": "7",
+            "valor": 93
+        },
+        {
+            "captura": "8",
+            "valor": 7
+        },
+        {
+            "captura": "9",
+            "valor": 80
+        },
+        {
+            "captura": "10",
+            "valor": 45
+        },
+        {
+            "captura": "11",
+            "valor": 13
+        },
+        {
+            "captura": "12",
+            "valor": 41
+        }
+    ]
+}
